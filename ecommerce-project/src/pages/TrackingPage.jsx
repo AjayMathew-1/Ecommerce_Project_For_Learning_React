@@ -3,7 +3,7 @@ export function TrackingPage() {
   return (
     <>
 
-
+      <title>Order Tracking</title>
       <div className="header">
         <div className="left-section">
           <a href="/" className="header-link">
