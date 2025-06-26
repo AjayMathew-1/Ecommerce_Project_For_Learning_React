@@ -2,7 +2,8 @@ import './TrackingPage.css';
 export function TrackingPage() {
   return (
     <>
-    
+
+
       <div className="header">
         <div className="left-section">
           <a href="/" className="header-link">
