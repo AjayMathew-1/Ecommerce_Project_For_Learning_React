@@ -13,9 +13,7 @@ export function HomePage({ cart,loadCart }) {
     const fetchHomeData = async () => {
       const response = await axios.get('https://ecommerce-project-for-learning-react.onrender.com/api/products');
       setProducts(response.data);
-    }catch (error) {
-        console.error("Error fetching products:", error);
-      }
+    }
     fetchHomeData();
   }, []);
 
