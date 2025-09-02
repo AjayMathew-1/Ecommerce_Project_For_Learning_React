@@ -15,7 +15,7 @@ export function CheckoutPage({ cart,loadCart }) {
 
   useEffect(() => {
     const fetchPaymentData = async () => {
-       const response = await axios.get('/api/payment-summary')
+       const response = await axios.get('https://ecommerce-project-for-learning-react.onrender.com/api/cart?expand=products')
           setPaymentSummary(response.data);
     };
     fetchPaymentData();
