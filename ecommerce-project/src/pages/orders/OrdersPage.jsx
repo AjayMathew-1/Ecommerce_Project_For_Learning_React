@@ -7,12 +7,16 @@ import './OrdersPage.css';
 export function OrdersPage({ cart }) {
   const [orders, setOrders] = useState([]);
 
-  useEffect(() => {
-    axios.get('/api/orders?expand=products')
-      .then((response) => {
-        setOrders(response.data);
-      })
-  }, []);
+useEffect(() => {
+  axios
+    .get('https://ecommerce-project-for-learning-react.onrender.com/api/orders?expand=products')
+    .then((response) => {
+      setOrders(response.data);
+    })
+    .catch((error) => {
+      console.error('Error fetching orders:', error);
+    });
+}, []);
   return (
     <>
       <title>Orders</title>
